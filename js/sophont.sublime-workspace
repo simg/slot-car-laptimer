@@ -1,0 +1,1151 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"backgroun",
+				"background-size"
+			],
+			[
+				"entity",
+				"entity_list"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"field",
+				"field_name"
+			],
+			[
+				"en",
+				"entity_instance"
+			],
+			[
+				"data",
+				"data_model"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/context.js",
+			"settings":
+			{
+				"buffer_size": 712,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "//TODO: need a client side module library\n\nContext = {\n\n  /*create:function(context) {\n    var obj = Object.create(this.instance_prototype,{});\n    _.assign(obj, context);\n    return obj;\n  },*/    \n\n\n\n  //instance_prototype:{\n\n    render:function(context) {\n      //var h  = traverse(context.data_model);\n      //console.log(\"html\", h)\n      //$(\"#context_menu\").html(h);\n\n      var docFrag = expanding_menu(context.data_model.schemas);\n      $(\"#context_menu\").append($(docFrag));\n\n      _.each(context.data_model.schemas)\n\n    }\n  //}\n}\n\nfunction node_click(ele) {\n\n},\n\nfunction expanding_menu(jsonObj) {\n   console.log(\"expanding_menu\")\n  if( typeof jsonObj == \"object\" ) {\n    var h = '<dl>';\n    for (v in jsonObj) {\n      if (jsonObj.hasOwnProperty(v)) {\n        h += '<dt>' + v + '</dt><dd></dd>';\n      }\n    }\n    h += '</dl>';\n    //return $(document.createDocumentFragment(h));\n    //var docFrag = document.createDocumentFragment();\n    //.html(h)\n    //docFrag.innerHTML = h;\n    //return docFrag;    \n    return h;\n  }\n  else {\n      // jsonOb is a number or string\n    //return $(document.createDocumentFragment(jsonObj));\n    //var docFrag = document.createDocumentFragment();\n    //.html(h)\n    //docFrag.innerHTML = jsonObj;\n    //return docFrag; \n    return jsonObj;\n  } \n}\n\n\nconsole.log(\"Hello world\")\n\nfunction traverse(jsonObj) {\n  console.log(\"traverse\")\n  if( typeof jsonObj == \"object\" ) {\n      var h = '<dl>';\n\n      for (v in jsonObj) {\n        if (jsonObj.hasOwnProperty(v)) {\n          h += '<dt>' + v + '</dt><dd>' + traverse(jsonObj[v]) + '</dd>';\n        }\n      }\n      h += '</dl>';\n      return h;\n  }\n  else {\n      // jsonOb is a number or string\n    return jsonObj;\n  }\n}",
+			"file": "/home/www/node/www/sophont/public/js/context.js",
+			"file_size": 1636,
+			"file_write_time": 130585246732622531,
+			"settings":
+			{
+				"buffer_size": 1710,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/pg_surface.js",
+			"settings":
+			{
+				"buffer_size": 5708,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/app/views/index.ejs",
+			"settings":
+			{
+				"buffer_size": 3634,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/public/js/libs/jquery.tablesorter.js",
+			"settings":
+			{
+				"buffer_size": 69944,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/assets/less/tablesorter.less",
+			"settings":
+			{
+				"buffer_size": 1271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/assets/less/style.less",
+			"settings":
+			{
+				"buffer_size": 7278,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/data_model/entities.js",
+			"settings":
+			{
+				"buffer_size": 5362,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/data_model/property.js",
+			"settings":
+			{
+				"buffer_size": 658,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/data_model/views.js",
+			"settings":
+			{
+				"buffer_size": 3815,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/sqlcode.js",
+			"settings":
+			{
+				"buffer_size": 1130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/javascript.js",
+			"settings":
+			{
+				"buffer_size": 1180,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 8076 files for \"console.log(\"field\"\n\n/home/www/node/www/sophont/app/views/entity_edit.jsx:\n   12  			if (field_name == \"id\" || field_name == 'created_at' || field_name == 'updated_at') continue;\n   13  			var field = this.props.fields[field_name];\n   14: 			console.log(\"field_name\", field_name, field.data_type);\n   15  			switch(field.udt_name) {\n   16  				case \"date\":\n\n/home/www/node/www/sophont/app/views/entity_view.jsx:\n   11  			if (field_name == \"id\" || field_name == 'created_at' || field_name == 'updated_at') continue;\n   12  			var field = this.props.fields[field_name];\n   13: 			//console.log(\"field_name\", field_name, field.data_type);\n   14  			switch(field.udt_name) {\n   15  				case \"address\":\n\n/home/www/node/www/sophont/app/views/compiled/entity_edit.js:\n   12  			if (field_name == \"id\" || field_name == 'created_at' || field_name == 'updated_at') continue;\n   13  			var field = this.props.fields[field_name];\n   14: 			console.log(\"field_name\", field_name, field.data_type);\n   15  			switch(field.udt_name) {\n   16  				case \"date\":\n\n/home/www/node/www/sophont/app/views/compiled/entity_view.js:\n   11  			if (field_name == \"id\" || field_name == 'created_at' || field_name == 'updated_at') continue;\n   12  			var field = this.props.fields[field_name];\n   13: 			//console.log(\"field_name\", field_name, field.data_type);\n   14  			switch(field.udt_name) {\n   15  				case \"address\":\n\n/home/www/node/www/sophont/lib/database/lib/utils.js:\n  238      for (f in entity.fields) {\n  239        var field = entity.fields[f];\n  240:       //console.log(\"field\", field_name, req.body[field_name], entity.columns[field_name].data_type);\n  241        //if (entity.columns[field_name].data_type == 'USER-DEFINED') {\n  242        if (field.type.fields) {\n\n/home/www/node/www/sophont/lib/database/lib/data_model/field_collection.js:\n   21        //field_definition.weight = utils.weight(field_definition.name);\n   22        //utils.array_insert_sorted(this.fields_by.weight, field_definition, \"weight\");\n   23:       //console.log(\"field_collection add field_definition\", field_definition);\n   24  		},\n   25      \n\n/home/www/node/www/sophont/lib/database/lib/data_model/field_definition.js:\n   28  		render:function(context) {\n   29  			//context.field = this; //TODO: is this the right place for this?\n   30: 			//console.log(\"field_definition-render-context\", context)\n   31  			var h = null;\n   32  			\n\n/home/www/node/www/sophont/lib/database/lib/data_model/property.js:\n    7  module.exports = {\n    8    create:function(field, value) {\n    9:     console.log(\"field\", field, value)\n   10      var obj = Object.create(field, {});\n   11      \n\n/home/www/node/www/sophont/lib/database/lib/data_model/views.js:\n   87                console.log(\"views-field\", field)\n   88                var prop = property.create(field, value);\n   89:               //console.log(\"field\", field)\n   90                context.mode = \"list\"; //TODO: remove this hack\n   91                //console.log(\"context\", context)\n\n/home/www/node/www/sophont/lib/database/lib/views/fields/composite.js:\n   13      switch(context.mode) {\n   14        case \"edit\":\n   15:         console.log(\"field\", this)\n   16          return '<label for=\"'+ this.name+'\">'+this.name+'</label>'+\n   17            '<input type=\"text\" name=\"' + this.name + '\" value=\"'+value +'\"/>';\n\n/home/www/node/www/sophont/lib/database/lib/views/fields/date.js:\n    4      switch(context.mode) {\n    5        case \"edit\":\n    6:         //console.log(\"field\", field)\n    7          return '<label for=\"'+this.name+'\">'+this.name+'</label>'+\n    8            '<input type=\"text\" name=\"' + this.name + '\" value=\"'+this.value +'\"/>';\n\n/home/www/node/www/sophont/lib/database/lib/views/fields/javascript.js:\n    3      console.log(\"render javascript field\")\n    4      var niceval = this.properties.query_text.value;\n    5:     //console.log(\"field.value\", this.name + \":\" + this.value)\n    6      if (niceval == null || niceval == undefined) {\n    7        niceval = \"\";\n    .\n   16        case \"edit\":\n   17        case \"view\":\n   18:         //console.log(\"field\", field)\n   19          var field_name = context_field_name() +'__query_text';\n   20          var h = '<label for=\"'+ field_name +'\">'+this.name+'</label>'+\n\n/home/www/node/www/sophont/lib/database/lib/views/fields/sqlcode.js:\n    2    render:function(context) {\n    3      var niceval = this.properties.query_text.value;\n    4:     //console.log(\"field.value\", this.name + \":\" + this.value)\n    5      if (niceval == null || niceval == undefined) {\n    6        niceval = \"\";\n    .\n   15        case \"edit\":\n   16        case \"view\":\n   17:         //console.log(\"field\", field)\n   18          var field_name = context_field_name() +'__query_text';\n   19          var h = '<label for=\"'+ field_name +'\">'+this.name+'</label>'+\n\n15 matches across 13 files\n",
+			"settings":
+			{
+				"buffer_size": 4888,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/data_model/entity.js",
+			"settings":
+			{
+				"buffer_size": 1782,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/app/views/index.jsx",
+			"settings":
+			{
+				"buffer_size": 2939,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/**\n  * @jsx React.DOM\n  */\nvar React = require('react-tools').React;\n\nvar MenuItem = React.createClass({\n    render: function(){\n        //var active = this.props.isActive === true ? 'active' : '';\n        //TODO: implement full roles / activity based authorisation \n        var Children = ' ', item; \n        if (this.props.item.items) {\n          Children = <MenuList items={this.props.item.items} req={this.props.req} />\n          //Children = <ul></ul>;\n          var item = <li><a href={this.props.item.href}>{this.props.item.text}</a>{Children}</li>;\n        } else {\n          var item = (<li><a href={this.props.item.href}>{this.props.item.text}</a></li>);\n        }\n        return item;\n    }\n});\n\n\nvar ContextMenu = React.createClass({\n    render: function() {\n      var _that = this;         \n      var menuItemList = this.props.items.map(function(menuItem){\n        if (menuItem.roles == 'authenticated') {\n          if (!_that.props.req.isAuthenticated()) {\n            return;\n          }\n        }\n        if (menuItem.roles == 'anonymous') {\n          if (_that.props.req.isAuthenticated()) {\n            return;\n          }\n        }       \n        return (\n          <MenuItem item={menuItem} req={_that.props.req} />\n        );\n      });\n      return (\n        <ul>{menuItemList}</ul>\n      );\n    }\n});\n\nmodule.exports = React.createClass({\n  render: function() {\n    \n    return (\n      <div class=\"context\" id={this.props.id}>\n        <Context items={this.props.context} />\n      </div>\n\n    );\n  }\n});",
+			"file": "/home/www/node/www/sophont/app/views/context.jsx",
+			"file_size": 1519,
+			"file_write_time": 130584969347571578,
+			"settings":
+			{
+				"buffer_size": 1525,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/utils.js",
+			"settings":
+			{
+				"buffer_size": 10572,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/default.js",
+			"settings":
+			{
+				"buffer_size": 1741,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/bool.js",
+			"settings":
+			{
+				"buffer_size": 864,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/url.js",
+			"settings":
+			{
+				"buffer_size": 454,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/data_model/index.js",
+			"settings":
+			{
+				"buffer_size": 9794,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/www/node/www/sophont/lib/database/lib/views/index.js",
+			"settings":
+			{
+				"buffer_size": 1486,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/www/node/www/sophont",
+		"/home/www/node/www/sophont/app",
+		"/home/www/node/www/sophont/assets",
+		"/home/www/node/www/sophont/assets/less",
+		"/home/www/node/www/sophont/lib",
+		"/home/www/node/www/sophont/lib/database",
+		"/home/www/node/www/sophont/lib/database/lib",
+		"/home/www/node/www/sophont/lib/database/lib/data_model",
+		"/home/www/node/www/sophont/lib/database/lib/views",
+		"/home/www/node/www/sophont/lib/database/lib/views/fields",
+		"/home/www/node/www/sophont/public",
+		"/home/www/node/www/sophont/public/css",
+		"/home/www/node/www/sophont/public/js"
+	],
+	"file_history":
+	[
+		"/home/www/node/www/sophont/lib/database/lib/data_model/entity.js",
+		"/home/www/node/www/sophont/lib/database/lib/data_model/entities.js",
+		"/home/www/node/www/sophont/lib/database/lib/views/fields/sqlcode.js",
+		"/home/www/node/www/sophont/lib/database/pg_surface.js",
+		"/home/www/node/www/sophont/lib/database/lib/handlers.js",
+		"/home/www/node/www/sophont/lib/database/lib/data_model/field_collection.js",
+		"/home/www/node/www/sophont/assets/less/style.less",
+		"/home/www/node/www/sophont/lib/database/lib/views/fields/address.js",
+		"/home/www/node/www/sophont/lib/database/lib/data_model/index.js",
+		"/home/www/node/www/sophont/lib/database/lib/views/index.js",
+		"/home/www/node/www/sophont/lib/database/lib/data_source.js",
+		"/home/www/node/www/sophont/lib/database/lib/views/fields/default.js",
+		"/home/www/node/www/sophont/lib/database/lib/views/fields/bool.js",
+		"/home/www/node/www/sophont/app/views/menu.jsx",
+		"/home/www/node/www/sophont/app/views/index.jsx",
+		"/home/www/node/www/sophont/app/views/index.ejs",
+		"/home/www/node/www/sophont/lib/database/lib/data_model/field_types.js",
+		"/home/www/node/www/sophont/lib/database/lib/views/fields/date.js",
+		"/home/www/node/www/sophont/lib/database/lib/data_model/field_definition.js",
+		"/home/www/node/www/sophont/lib/database/lib/data_model/property.js",
+		"/home/www/node/www/sophont/lib/database/lib/data_model/views.js",
+		"/home/www/node/www/sophont/lib/database/lib/views/fields/url.js",
+		"/home/simon/www/elm/examples/elm-lang.org/elm_dependencies.json",
+		"/home/www/node/www/laptimer/package.json",
+		"/home/www/node/www/laptimer/app.js",
+		"/home/simon/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/simon/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/simon/www/node/www/sophont/TODO.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"console.log(\"field",
+			"console.log(\"i",
+			"console.log(\"fields",
+			"console.log(\"default",
+			"default object",
+			"fields_by.weight",
+			"console.log(\"data_model\"",
+			"query_2",
+			"this.query_2",
+			"console.log(\"sql\"",
+			"console.log(\"re-initialise data model\")",
+			"context_field_name()",
+			"UPDATE",
+			"app.session.fastest_laps",
+			"blue"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 20,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/www/node/www/sophont/lib/database/lib/context.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								712,
+								712
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/www/node/www/sophont/public/js/context.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								523,
+								523
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/www/node/www/sophont/lib/database/pg_surface.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5565,
+								5565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2018.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/www/node/www/sophont/app/views/index.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1408,
+								1408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 10.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/www/node/www/sophont/public/js/libs/jquery.tablesorter.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 69944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								636,
+								636
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/www/node/www/sophont/assets/less/tablesorter.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								79,
+								79
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/www/node/www/sophont/assets/less/style.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3032,
+								3032
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1829.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/www/node/www/sophont/lib/database/lib/data_model/entities.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3071,
+								3071
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/www/node/www/sophont/lib/database/lib/data_model/property.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/www/node/www/sophont/lib/database/lib/data_model/views.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1483,
+								1483
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/sqlcode.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1130,
+								1130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/javascript.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4888,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										268,
+										286
+									],
+									[
+										607,
+										625
+									],
+									[
+										955,
+										973
+									],
+									[
+										1302,
+										1320
+									],
+									[
+										1571,
+										1589
+									],
+									[
+										2043,
+										2061
+									],
+									[
+										2340,
+										2358
+									],
+									[
+										2578,
+										2596
+									],
+									[
+										2879,
+										2897
+									],
+									[
+										3178,
+										3196
+									],
+									[
+										3509,
+										3527
+									],
+									[
+										3896,
+										3914
+									],
+									[
+										4113,
+										4131
+									],
+									[
+										4467,
+										4485
+									],
+									[
+										4684,
+										4702
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/www/node/www/sophont/lib/database/lib/data_model/entity.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1406,
+								1406
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/www/node/www/sophont/app/views/index.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1260,
+								1260
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 294.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/home/www/node/www/sophont/app/views/context.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1492,
+								1492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/home/www/node/www/sophont/lib/database/lib/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6871,
+								6871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/default.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1741,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1334,
+								1334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 70.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/bool.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								77,
+								77
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "/home/www/node/www/sophont/lib/database/lib/views/fields/url.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "/home/www/node/www/sophont/lib/database/lib/data_model/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7907,
+								7907
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3057.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "/home/www/node/www/sophont/lib/database/lib/views/index.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "sophont.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 290.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

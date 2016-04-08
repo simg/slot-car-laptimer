@@ -1,0 +1,430 @@
+BODY {font-family:verdana, tahoma, sans-serif;}
+
+H1 {margin-bottom:.5em;}
+P	{margin:0px 0px 1em 0px;}
+
+#page {background:#fff; width:1240px; margin:0px auto 20px auto; position:relative;}
+#header {background:#000; height:45px; position:relative;}
+#header H1 {color:#fff; float:left; font-weight:bold; font-size:130%; padding:3px 20px; margin:5px 0 15px 0;}
+
+
+#buttons {font-size:90%;  float:left; margin:5px 0px 0px 0px;}
+#buttons INPUT {float:left;}
+#lights {float:left; margin:-3px 15px 0px 5px; height:32px; width:32px;}
+#lights.go {background:url(images/lights_go_small.png) no-repeat;}
+#lights.stop {background:url(images/lights_stop_small.png) no-repeat;}
+
+#menu {text-align:right; padding:0px 0 0 0; position:absolute; right:10px; top:10px;}
+#menu UL {float:right; margin:0; padding:0;}
+#menu LI {float:left;}
+#menu A {margin:0px 30px 0px 0px; text-decoration:none; color:#fff; font-size:100%;}
+#menu A:hover {text-decoration:underline;}
+
+.second_menu {position:absolute; top:20px; right:50px; width:200px;}
+.second_menu ul {list-style:none; margin:0; padding:0;}
+.second_menu li {}
+.second_menu a {}
+.second_menu a:hover {}
+
+#content h1 {font-size:140%;}
+#screens .screen {display:none; position:relative;}
+#screens .screen .hidden {display:none;}
+
+.panel_left {float:left; width:50%;}
+
+#settings {}
+#settings UL {margin:0px; list-style:none; padding:0px;}
+#settings LI {margin:10px 0px; padding:0px;}
+#settings LABEL {clear:both; margin:0px; display:block; font-size:76%; font-weight:bold;}
+#settings INPUT.text,
+#settings SELECT.text {clear:both; margin:0px; width:auto; font-size:120%;}
+
+ul.left {margin:0; padding:0; list-style:none;}
+ul.left li {float:left; display:block; margin:0 15px 0 0;}
+
+form ul.items {margin:0; padding:0; list-style:none;}
+
+
+#notify {position:absolute; top:450px; right:10px; margin:10px 0px 10px 15px; width:130px; height:150px; overflow:hidden; font-size:75%;}
+#notify UL {list-style:none; margin:0; padding:0;}
+#notify UL LI {margin-bottom:4px; color:#333; list-style:none;}
+
+#notify .heading	{padding-right:10px;}
+#notify .label {font-size:70%; font-weight:bold; color:#666;}
+#notify .value {font-size:70%;  padding-left:3px; font-weight:bold; color:#111;}
+#notify .msg {display:block; clear:both; font-size:85%; font-weight:bold;}
+
+#graph {
+  position:absolute;
+  top:50px; left:25px;
+  height:500px;
+  width:550px;
+  border:2px solid #222;
+}
+
+#graph .scale {
+  width:25px;
+  position:absolute;
+  left:-25px;
+  bottom:0px;
+  height:500px;
+}
+
+#history_hack {
+  clear:both;
+  position:absolute; top:575px;
+}
+
+#history_hack table {
+  width:1220px;
+}
+
+#history_hack th,
+#history_hack td {
+  text-align:left;
+}
+
+#history_hack td {
+  xfont-size:90%;
+  padding-bottom:2px;
+}
+
+#history {
+  position:absolute;
+  top:500px; left:25px;
+  height:250px;
+  width:550px;
+  border:2px solid #222;
+}
+
+#history .scale {
+  width:25px;
+  position:absolute;
+  left:-25px;
+  bottom:0px;
+  height:250px;
+}
+
+#graph .scale ul,
+#history .scale ul{
+  list-style:none; margin:0; padding:0;
+  font-size:60%;
+  position:relative;
+}
+#graph .scale li,
+#history .scale li {
+  position:absolute;
+  display:block;
+  right:0px;
+}
+
+#graph .scale li .val,
+#history .scale li .val {
+  position:absolute;
+  display:block;
+  top:-6px;
+  right:5px;
+  text-align:right;
+}
+
+#graph .laps ul,
+#history .laps ul{
+  list-style:none; margin:0; padding:0 0 30px 0;
+  position:absolute;
+  bottom:-60px;
+  left:0px;
+  height:530px;
+  overflow:hidden;
+}
+
+#graph .laps li,
+#history .laps li {
+  float:left;
+  width:15px;
+  margin:0 4px 0 3px;
+  position:relative;
+}
+
+#graph .stack,
+#history .stack {
+  height:500px;
+  width:15px;
+  position:relative;
+}
+
+#graph .stack .time,
+#history .stack .time {
+  font-size:8px;
+  margin-top:2px;
+  display:block;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg)
+}
+
+#graph .lane,
+#history .lane {
+  position:absolute;
+  bottom:0;
+  width:13px;
+  border:1px solid;
+  border-bottom:none;
+}
+
+#graph li .lane_1,
+#history li .lane_1 {
+  background:#f44;
+  border-color:#a00;
+}
+
+#graph li .lane_2,
+#history li .lane_2 {
+  background:#4f4;
+  border-color:#0a0;
+}
+
+#graph li .legend,
+#history li .legend{
+  position:absolute;
+  bottom:-20px;
+  font-size:60%;
+}
+
+
+.average_bar {
+  width:100%;
+  height:2px;
+  position:absolute;
+  z-index:5;
+  opacity:0.5;
+}
+
+.average_bar.lane_1 {
+  background:#f44;
+}
+
+.average_bar.lane_2 {
+  background:#4f4;
+}
+
+.fastest_laptime {
+  border-top:2px dotted #090;
+}
+
+.fastest_blue_ribbon {
+ border-top:2px dotted #009;
+}
+
+#lanes {
+  position:absolute;
+  top:60px; left:600px;
+  height:500px;
+  width:660px;
+}
+
+#lanes DL {margin:0px; font-size:110%;}
+#lanes DT {float:left; clear:both; margin:0px 8px 5px 0px; width:4em;}
+#lanes DD {margin:0px 0px 5px 0px; font-weight:bold; position:relative;}
+#lanes DD span {display:block; float:left; margin:3px 15px 0 0; width:6em; xfont-size:80%;}
+x#xlanes DD .other {color:#666; font-size:80%; position:relative; top:-5px; left:5px;}
+x#xlanes DD .session {color:#999; font-size:80%; position:relative; top:-5px; left:5px;}
+
+#lanes .lane {
+  position:relative;
+  margin-bottom:20px;
+  float:left;
+  clear:both;
+}
+#lanes .lane .no  {
+  font-size:350%;
+  line-height:90%;
+  color:#999;
+  font-weight:bold;
+  float:left;
+  width:45px;
+  margin-left:-10px;
+  margin-right:10px;
+  text-align:center;
+}
+
+#lanes .lane_1 .no {
+  color:#f44;
+}
+
+#lanes .lane_2 .no {
+  color:#4f4;
+}
+
+#lanes .lane .stats {
+  float:left;
+  width:460px;
+}
+
+#lanes .driver .name,
+#lanes .car .name {
+  width:8em;
+  xfloat:left;
+  display:inline-block;
+  overflow:clip;
+  font-size:90%;
+}
+
+#lanes .car {
+  padding-top:7px;
+}
+
+#lanes .driver .value,
+#lanes .car .value {
+  width:3.5em;
+  xfloat:left;
+  display:inline-block;
+}
+
+.value {
+  position:relative;
+}
+
+.value span {
+  border:1px solid #ddf;
+  border-radius:3px;
+  background:#eef;
+  padding:2px 5px;
+  font-size:80%;
+  font-weight:bold;
+}
+
+.value span:before {
+  font-size:50%;
+  text-transform:uppercase;
+  position:absolute;
+  top:-8px; left:-3px;
+}
+
+#lanes .driver .value.races span:before {
+  content:"R";
+}
+#lanes .driver .value.crashes span:before {
+  content:"C";
+}
+#lanes .driver .value.blue_ribbons span:before {
+  content:"B";
+}
+#lanes .driver .value.points span:before {
+  content:"P";
+}
+
+#modal {
+  z-index:1000;
+}
+
+#modal .overlay {
+  position:fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:#222;
+  opacity:.6;
+  z-index:1000;
+}
+
+#modal .content {
+  position:relative;
+  background:#fff;
+  padding:2em;
+  opacity:1;
+  width:50%;
+  margin:20% auto;
+  z-index:1001;
+}
+
+tr.highlight {
+  background:#bbf;
+}
+
+#summary table {
+  border-collapse:collapse;
+}
+
+#summary td {
+  text-align:left;
+}
+
+#summary th {
+  padding-right:2em;
+}
+
+#summary td.name,
+#summary th.name {
+  text-align:left;
+  xwidth:10em;
+}
+
+#summary .driver,
+#summary .car {
+  border-bottom:1px solid #666;
+  background:#ccc;
+  border-top:10px solid #fff;
+}
+
+
+#summary .driver:nth-child(2),
+#summary .car:nth-child(2) {
+  border-top:none;
+}
+
+#summary .driver_car,
+#summary .car_lane {
+  xfont-size:70%;
+  color:#666;
+}
+
+#summary .car_summary .car_lane {
+  border-top:10px solid #fff;
+}
+
+#summary .car_summary .car_line:nth-child(2) {
+  border-top:none;
+}
+
+.blue_ribbon {
+  display:inline-block;
+  position:relative;
+  padding-right:10px;
+}
+.blue_ribbon:after {
+  position:absolute;
+  /*top:-35px; right:-7px;*/
+  top:0px; right:-4px;
+  content:"";
+  width:10px; height:15px;
+  background:url(../images/rosette1.png) no-repeat;
+  font-size:300%;
+  font-weight:bold;
+  color:#22a;
+}
+
+.car_lane_summary {
+  /* XXX:  */xfont-size:80%;
+  padding-left:5%;
+}
+
+.car_lane_summary th {
+  font-weight:normal;
+}
+.car__lane_summary td {
+  color:#666;
+}
+
+.car_lane_summary .fastest {
+  width:30%;
+  float:left;
+  margin-right:3%;
+}
+
+#summary h4 {
+  font-size:80%;
+  color:#666;
+  margin:3px 0 0 0;
+}
+
+
+#footer {clear:both; font-size:70%; margin-left:250px; padding-top:30px;}
+#footer a {color:#000; text-decoration:none;}
+#footer a:hover {text-decoration:underline;}
